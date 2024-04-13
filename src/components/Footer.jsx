@@ -1,0 +1,48 @@
+import { Link } from "react-router-dom";
+
+const Footer = () => {
+  return (
+    <div>
+      <footer className="footer p-10 bg-slate-900 text-white">
+        <nav>
+          <h6 className="footer-title">Services</h6>
+          <a className="link link-hover">Branding</a>
+          <a className="link link-hover">Design</a>
+          <a className="link link-hover">Marketing</a>
+          <a className="link link-hover">Advertisement</a>
+        </nav>
+        <nav>
+          <h6 className="footer-title">Company</h6>
+          <Link to="/about" className="link link-hover">About us</Link>
+          <Link to="/contact" className="link link-hover">Contact</Link>
+          <a className="link link-hover">Jobs</a>
+          <a className="link link-hover">Press kit</a>
+        </nav>
+        <nav>
+          <h6 className="footer-title">Legal</h6>
+          <a className="link link-hover">Terms of use</a>
+          <a className="link link-hover">Privacy policy</a>
+          <a className="link link-hover">Cookie policy</a>
+        </nav>
+      </footer>
+      <footer className="footer px-10 py-4 border-t bg-slate-900 text-white border-base-300">
+        <aside className="items-center font-medium text-lg grid-flow-col">
+          <p className="cursor-pointer text-gray-600 hover:text-white">
+            PRIVACY
+          </p>
+          <p>&</p>
+          <p className="cursor-pointer text-gray-600 hover:text-white">
+            PRIVACY
+          </p>
+        </aside>
+        <nav className="md:place-self-center md:justify-self-end">
+          <div className="grid grid-flow-col gap-4">
+            <p>© Copyright Reserved by The Reez Family.</p>
+          </div>
+        </nav>
+      </footer>
+    </div>
+  );
+};
+
+export default Footer;
