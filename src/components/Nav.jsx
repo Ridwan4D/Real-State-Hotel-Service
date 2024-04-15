@@ -71,7 +71,7 @@ const Nav = () => {
               className="btn btn-ghost btn-circle avatar"
             >
               <Link to="/userProfile" className="w-10 rounded-full">
-                <img alt="Tailwind CSS Navbar component" className="rounded-full" src={user?.photoURL || userLogo} />
+                <img alt="Tailwind CSS Navbar component" className="rounded-full animate__animated hover:animate__heartBeat" src={user?.photoURL || userLogo} />
               </Link>
             </div>
             <button

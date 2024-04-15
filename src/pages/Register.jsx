@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -17,7 +17,7 @@ const Register = () => {
     createUserWithGoogle()
       .then((result) => {
         console.log(result);
-        toast("Registered")
+        toast("Registered");
       })
       .catch((error) => {
         console.log(error.message);
@@ -29,6 +29,7 @@ const Register = () => {
     e.preventDefault();
     const name = e.target.name.value;
     const email = e.target.email.value;
+    const photoUrl = e.target.photoUrl.value;
     const password = e.target.password.value;
     const confirmPassword = e.target.confirmPassword.value;
     // console.log(email, password);
@@ -64,11 +65,11 @@ const Register = () => {
         toast("Account Registered");
         updateProfile(result.user, {
           displayName: name,
-        }).then(() => {
-          toast("Profile Updated");
-        });
+          photoURL: photoUrl,
+        }).then();
         e.target.name.value = "";
         e.target.email.value = "";
+        e.target.photoUrl.value = "";
         e.target.password.value = "";
         e.target.confirmPassword.value = "";
       })
@@ -80,7 +81,6 @@ const Register = () => {
         }
       });
   };
-
 
   return (
     <section className="min-h-screen flex items-stretch text-white ">
@@ -196,6 +196,15 @@ const Register = () => {
                 placeholder="Email"
                 className="block w-full p-2 text-lg rounded-sm bg-black"
                 required
+              />
+            </div>
+            <div className="pb-2 pt-1">
+              <input
+                type="text"
+                name="photoUrl"
+                id="photoUrl"
+                placeholder="Image"
+                className="block w-full p-2 text-lg rounded-sm bg-black"
               />
             </div>
             <div className="pb-2 pt-1 p-2 text-lg rounded-sm bg-black flex items-center">

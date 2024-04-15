@@ -1,13 +1,24 @@
 import { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import userLogo from "../assets/user.png";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const UserProfile = () => {
-  const { user } = useContext(AuthContext);
-  console.log(user);
+  const { user, upgradeProfile } = useContext(AuthContext);
+//   console.log(user);
 
   //   update profile
+  const handleUpdateProfile = (e) => {
+    e.preventDefault;
+    const name = e.target.name.value;
+    const photoUrl = e.target.photoUrl.value;
+    console.log(name,photoUrl);
 
+    upgradeProfile(name, photoUrl).then(() => {
+      toast("Profile Updated");
+    });
+  };
   return (
     <div>
       <div className="h-screen w-full bg-gray-50 flex justify-center items-center">
@@ -65,10 +76,52 @@ const UserProfile = () => {
                     ✕
                   </button>
                 </form>
+                <form onSubmit={handleUpdateProfile}>
+                  <label
+                    htmlFor="website-admin"
+                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  >
+                    Username
+                  </label>
+                  <div className="flex">
+                    <span className="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
+                      @
+                    </span>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      className="rounded-none rounded-r-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      placeholder="user name"
+                    />
+                  </div>
+                  <label
+                    htmlFor="website-admin"
+                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  >
+                    Photo URL
+                  </label>
+                  <div className="flex">
+                    <span className="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
+                      @
+                    </span>
+                    <input
+                      type="text"
+                      id="photoUrl"
+                      name="photoUrl"
+                      className="rounded-none rounded-r-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      placeholder="Image"
+                    />
+                  </div>
+                  <div className="w-full mt-5 flex flex-row justify-center">
+                    <button className="btn bg-blue-500 btn-wide">Save</button>
+                  </div>
+                </form>
               </div>
             </dialog>
           </div>
         </div>
+        <ToastContainer />
       </div>
     </div>
   );

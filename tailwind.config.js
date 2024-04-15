@@ -6,7 +6,16 @@ export default {
   ],
   theme: {
     extend: {},
+    animatedSettings: {
+      animatedSpeed: 1000,
+      heartBeatSpeed: 1000,
+      hingeSpeed: 2000,
+      bounceInSpeed: 750,
+      bounceOutSpeed: 750,
+      animationDelaySpeed: 500,
+      classes: ['bounce', 'heartBeat']
+    }
   },
-  plugins: [require("daisyui")],
+  plugins: [require("daisyui"), require('tailwindcss-animatecss'),],
 }
 
