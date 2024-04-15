@@ -29,7 +29,7 @@ const Register = () => {
     e.preventDefault();
     const name = e.target.name.value;
     const email = e.target.email.value;
-    const photoUrl = e.target.photoUrl.value;
+    const image = e.target.image.value;
     const password = e.target.password.value;
     const confirmPassword = e.target.confirmPassword.value;
     // console.log(email, password);
@@ -65,11 +65,11 @@ const Register = () => {
         toast("Account Registered");
         updateProfile(result.user, {
           displayName: name,
-          photoURL: photoUrl,
+          photoURL: image,
         }).then();
         e.target.name.value = "";
         e.target.email.value = "";
-        e.target.photoUrl.value = "";
+        e.target.image.value = "";
         e.target.password.value = "";
         e.target.confirmPassword.value = "";
       })
@@ -201,8 +201,8 @@ const Register = () => {
             <div className="pb-2 pt-1">
               <input
                 type="text"
-                name="photoUrl"
-                id="photoUrl"
+                name="image"
+                id="image"
                 placeholder="Image"
                 className="block w-full p-2 text-lg rounded-sm bg-black"
               />

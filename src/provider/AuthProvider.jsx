@@ -25,13 +25,12 @@ const AuthProvider = ({ children }) => {
     setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
-  
-  const upgradeProfile = (name, image,phone) => {
+
+  const upgradeProfile = (name, image) => {
     setLoading(true);
     return updateProfile(auth.currentUser, {
-      displayName: name? name : user.displayName,
+      displayName: name ? name : user.displayName,
       photoURL: image ? image : user.photoURL,
-      phoneNumber: phone,
     });
   };
   const logout = () => {

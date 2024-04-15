@@ -7,7 +7,7 @@ import { useForm } from "react-hook-form";
 
 const UserProfile = () => {
   const { user, upgradeProfile } = useContext(AuthContext);
-
+  console.log(user.phoneNumber);
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
     const { name, image } = data;
@@ -18,9 +18,9 @@ const UserProfile = () => {
   };
   return (
     <div>
-      <div>
-        <h3 className="text-4xl font-bold animate__animated animate__flip shadow-lg">User Profile</h3>
-      </div>
+      <h3 className="text-4xl font-bold  animate__animated animate__flip shadow-lg">
+        User Profile
+      </h3>
       <div className=" flex flex-wrap items-center justify-center bg-gray-100 py-10">
         <div className="container lg:w-2/6 xl:w-2/7 sm:w-full md:w-2/3    bg-white  shadow-lg    transform   duration-200 easy-in-out">
           <div className="flex justify-center px-5  -mt-12">
@@ -36,7 +36,6 @@ const UserProfile = () => {
                 {user.displayName}
               </h2>
               <a className="text-gray-400 mt-2">{user.email}</a>
-              <p className="mt-2 text-gray-500 text-sm">{user.phoneNumber}</p>
             </div>
             <hr className="mt-6" />
             <div className="flex  bg-gray-50 ">
@@ -109,6 +108,10 @@ const UserProfile = () => {
                         placeholder="Image"
                       />
                     </div>
+                    <div className="w-full mt-5 flex flex-row justify-center">
+                      <button className="btn bg-blue-500 text-white btn-wide">Save</button>
+                    </div>
+                    <small className="text-blue-500">After save reload Page......</small>
                   </form>
                 </div>
               </dialog>
