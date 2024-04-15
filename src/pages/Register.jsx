@@ -1,26 +1,43 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { FaEyeSlash, FaRegEye } from "react-icons/fa";
+import { updateProfile } from "firebase/auth";
 
 const Register = () => {
   const [success, setSuccess] = useState("");
   const [registerError, setRegisterError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-  const { createUser } = useContext(AuthContext);
+  const { createUser, createUserWithGoogle } = useContext(AuthContext);
+
+  // google register
+  const handleGoogleRegister = () => {
+    createUserWithGoogle()
+      .then((result) => {
+        console.log(result);
+        toast("Registered")
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  };
+
+  // email register
   const handleRegister = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
+    const confirmPassword = e.target.confirmPassword.value;
     // console.log(email, password);
     // clear message
     setSuccess("");
     setRegisterError("");
 
     //validate password
+
     if (
       !/^(?=.*[A-Z]).+$/.test(password) &&
       !/^(?=.*[a-z]).+$/.test(password)
@@ -36,27 +53,35 @@ const Register = () => {
       setRegisterError("Use minimum 1 lower case in password");
       return;
     }
-
+    if (password != confirmPassword) {
+      setRegisterError("Password didn't matched");
+      return;
+    }
     // create user
     createUser(email, password)
       .then((result) => {
         console.log(result.user);
         toast("Account Registered");
+        updateProfile(result.user, {
+          displayName: name,
+        }).then(() => {
+          toast("Profile Updated");
+        });
+        e.target.name.value = "";
+        e.target.email.value = "";
+        e.target.password.value = "";
+        e.target.confirmPassword.value = "";
       })
       .catch((error) => {
         if (error.message == "Firebase: Error (auth/email-already-in-use).") {
           toast("Email Already in Use");
-          // eslint-disable-next-line no-cond-assign
-        } else if (
-          (error.message =
-            "Firebase: Password should be at least 6 characters (auth/weak-password).")
-        ) {
-          setRegisterError("Password Should be 6 character or longer");
         } else {
           setRegisterError(error.message);
         }
       });
   };
+
+
   return (
     <section className="min-h-screen flex items-stretch text-white ">
       <div
@@ -91,6 +116,7 @@ const Register = () => {
         <div className="w-full py-6 z-20">
           <div className="mb-10">
             <button
+              onClick={handleGoogleRegister}
               aria-label="Continue with google"
               role="button"
               className="focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-gray-700 py-3.5 px-4 border rounded-lg border-gray-700 flex items-center w-full mt-10"
@@ -174,7 +200,7 @@ const Register = () => {
             </div>
             <div className="pb-2 pt-1 p-2 text-lg rounded-sm bg-black flex items-center">
               <input
-                className="block w-full bg-black"
+                className="block w-full bg-black border-0"
                 type={showPassword ? "text" : "password"}
                 name="password"
                 id="password"
