@@ -76,14 +76,14 @@ const Nav = () => {
             </div>
             <button
               onClick={handleLogOut}
-              className="px-7 py-1 text-white text-xl font-semibold hover:bg-gray-600 hover:text-black active:scale-95 rounded-none bg-[#403F3F]"
+              className="px-7 py-1 text-white text-xl font-semibold hover:bg-gray-600 hover:text-black active:scale-95 rounded-none bg-slate-900"
             >
               Sing out
             </button>
           </div>
         ) : (
           <Link to="/login">
-            <button className="px-7 py-1 text-white text-base md:text-xl font-semibold hover:bg-gray-600 hover:text-black active:scale-95 rounded-none bg-[#403F3F]">
+            <button className="px-7 py-1 text-white text-base md:text-xl font-semibold hover:bg-gray-600 hover:text-black active:scale-95 rounded-none bg-slate-900">
               Login
             </button>
           </Link>

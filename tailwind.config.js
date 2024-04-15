@@ -13,7 +13,7 @@ export default {
       bounceInSpeed: 750,
       bounceOutSpeed: 750,
       animationDelaySpeed: 500,
-      classes: ['bounce', 'heartBeat']
+      classes: ['bounce', 'heartBeat','flip']
     }
   },
   plugins: [require("daisyui"), require('tailwindcss-animatecss'),],
