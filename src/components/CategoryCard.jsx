@@ -13,6 +13,7 @@ const CategoryCard = ({ category }) => {
   } = category;
   return (
     <div>
+      
       <div
         className="rounded-md shadow-md dark:bg-gray-50 dark:text-gray-800 hover:scale-95 transition-all hover:shadow-xl"
         data-aos="zoom-in"

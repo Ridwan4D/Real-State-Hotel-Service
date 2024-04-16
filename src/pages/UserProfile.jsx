@@ -4,6 +4,7 @@ import { AuthContext } from "../provider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useForm } from "react-hook-form";
+import { Helmet } from "react-helmet";
 
 const UserProfile = () => {
   const { user, upgradeProfile } = useContext(AuthContext);
@@ -18,6 +19,11 @@ const UserProfile = () => {
   };
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>User- The Reez Family</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <h3 className="text-xl md:text-4xl font-bold  animate__animated animate__flip shadow-lg">
         User Profile
       </h3>

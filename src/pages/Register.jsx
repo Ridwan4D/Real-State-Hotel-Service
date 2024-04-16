@@ -5,6 +5,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { FaEyeSlash, FaRegEye } from "react-icons/fa";
 import { updateProfile } from "firebase/auth";
+import { Helmet } from "react-helmet";
 
 const Register = () => {
   const [success, setSuccess] = useState("");
@@ -96,6 +97,11 @@ const Register = () => {
 
   return (
     <section className="mt-20 min-h-screen flex items-stretch text-white ">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Register- The Reez Family</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <div
         className="lg:flex w-1/2 hidden bg-gray-500 bg-no-repeat bg-cover relative items-center"
         style={{

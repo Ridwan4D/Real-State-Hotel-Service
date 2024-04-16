@@ -1,11 +1,12 @@
 import { Link, useLoaderData, useParams } from "react-router-dom";
 import { IoMdArrowBack } from "react-icons/io";
+import { Helmet } from "react-helmet";
 
 const Details = () => {
   const categories = useLoaderData();
   const { id } = useParams();
   const category = categories.find((category) => category.id == id);
-  console.log(category);
+  // console.log(category);
   const {
     image,
     estate_title,
@@ -20,6 +21,11 @@ const Details = () => {
   // console.log(category);
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Details/{id}- The Reez Family</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <div
         className="dark:bg-gray-100 dark:text-gray-900"
         data-aos="zoom-in"

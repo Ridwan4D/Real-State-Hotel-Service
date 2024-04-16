@@ -12,8 +12,8 @@ const Offer = ({ offer }) => {
   } = offer;
   return (
     <div>
-      <div className="rounded-md shadow-md sm:w-96 dark:bg-gray-50 dark:text-gray-800">
-        <div className="flex items-center justify-between p-3 bg-slate-900 text-gray-500 mb-3">
+      <div className="rounded-lg shadow-md border-2 border-gray-500 sm:w-96 dark:bg-gray-50 dark:text-gray-800">
+        <div className="flex items-center rounded-t-lg justify-between p-3 bg-slate-900 text-gray-500 mb-3">
           <h3 className="text-2xl font-semibold">{hotelName}</h3>
         </div>
         <img

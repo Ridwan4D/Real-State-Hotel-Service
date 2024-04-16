@@ -6,11 +6,11 @@ const MainLayOut = () => {
   return (
     <div className="md:max-w-7xl mx-auto">
       {/* navbar */}
-      <div className="h-16 mb-10">
+      <div className="h-16 md:mb-10">
         <Nav></Nav>
       </div>
       {/* outlets */}
-      <div className="px-3 mt-20 min-h-[calc(100vh - 356px)]">
+      <div className="px-3 min-h-[calc(100vh - 356px)]">
         <Outlet></Outlet>
       </div>
       {/* footer */}

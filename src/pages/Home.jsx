@@ -2,12 +2,18 @@ import { useLoaderData } from "react-router-dom";
 import CategoryCard from "../components/CategoryCard";
 import Slider from "../components/Slider";
 import Offers from "./Offers";
+import { Helmet } from "react-helmet";
 const Home = () => {
   const categories = useLoaderData();
   //   console.log(offers);
   //   console.log(categories);
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Home- The Reez Family</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       {/* slider */}
       <Slider></Slider>
 

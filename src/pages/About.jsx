@@ -1,6 +1,13 @@
+import { Helmet } from "react-helmet";
+
 const About = () => {
   return (
     <div className="space-y-5">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>About- The Reez Family</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <div className=" text-center ">
         <h3 className="text-3xl md:text-4xl font-bold animate__animated animate__fadeInUp">
           About Us
