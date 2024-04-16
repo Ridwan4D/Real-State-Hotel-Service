@@ -10,6 +10,7 @@ import UserProfile from "../pages/UserProfile";
 import PrivateRoute from "./PrivateRoute";
 import Details from "../pages/Details";
 import Offers from "../pages/Offers";
+import UpdateProfile from "../pages/UpdateProfile";
 
 const router = createBrowserRouter([
   {
@@ -51,7 +52,6 @@ const router = createBrowserRouter([
         path: "/userProfile",
         element: (
           <PrivateRoute>
-            {/* <UserProfile></UserProfile> */}
             <UserProfile></UserProfile>
           </PrivateRoute>
         ),
@@ -60,11 +60,18 @@ const router = createBrowserRouter([
         path: "/offers",
         element: (
           <PrivateRoute>
-            {/* <UserProfile></UserProfile> */}
             <Offers></Offers>
           </PrivateRoute>
         ),
         loader: ()=>fetch(`/offer.json`)
+      },
+      {
+        path: "/updateProfile",
+        element: (
+          <PrivateRoute>
+            <UpdateProfile></UpdateProfile>
+          </PrivateRoute>
+        ),
       },
     ],
   },

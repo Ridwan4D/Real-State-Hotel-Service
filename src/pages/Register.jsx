@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -13,13 +13,16 @@ const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
   const { createUser, createUserWithGoogle, createUserWithGithub } =
     useContext(AuthContext);
-
+    const location = useLocation();
+    const navigate = useNavigate();
   // google register
   const handleGoogleRegister = () => {
     createUserWithGoogle()
       .then((result) => {
         console.log(result);
         toast("Registered");
+        // navigate after register
+        navigate(location?.state ? location.state : '/')
       })
       .catch((error) => {
         console.log(error.message);
@@ -32,6 +35,8 @@ const Register = () => {
       .then((result) => {
         console.log(result);
         toast("Registered");
+        // navigate after register
+        navigate(location?.state ? location.state : '/')
       })
       .catch((error) => {
         console.log(error.message);
@@ -79,7 +84,10 @@ const Register = () => {
         updateProfile(result.user, {
           displayName: name,
           photoURL: image,
+          email: email,
         }).then();
+        // navigate after register
+        navigate(location?.state ? location.state : '/')
         e.target.name.value = "";
         e.target.email.value = "";
         e.target.image.value = "";

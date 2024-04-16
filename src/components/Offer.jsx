@@ -1,7 +1,7 @@
 import PropType from "prop-types";
 
 const Offer = ({ offer }) => {
-  console.log(offer);
+//   console.log(offer);
   const {
     image,
     offerName,

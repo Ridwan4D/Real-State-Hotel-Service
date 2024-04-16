@@ -24,6 +24,11 @@ const Nav = () => {
           <NavLink to="/offers">User Offers</NavLink>
         </li>
       )}
+      {user && (
+        <li>
+          <NavLink to="/updateProfile">Update Profile</NavLink>
+        </li>
+      )}
     </>
   );
   return (

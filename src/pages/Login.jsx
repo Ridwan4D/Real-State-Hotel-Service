@@ -1,9 +1,11 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../provider/AuthProvider";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 const Login = () => {
   const { signIn } = useContext(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
   const [success, setSuccess] = useState("");
   const [loginError, setLoginError] = useState("");
 
@@ -21,6 +23,8 @@ const Login = () => {
       .then((result) => {
         console.log(result.user.email);
         setSuccess("Logged in");
+        // navigate after login
+        navigate(location?.state ? location.state : '/')
       })
       .catch((error) => {
         console.log(error.message);

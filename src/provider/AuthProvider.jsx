@@ -9,12 +9,13 @@ import {
   updateProfile,
 } from "firebase/auth";
 import auth from "../firebase/firebase.config";
-import { GoogleAuthProvider,GithubAuthProvider } from "firebase/auth";
+import { GoogleAuthProvider, GithubAuthProvider } from "firebase/auth";
 
 export const AuthContext = createContext(null);
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [bio, setBio] = useState("");
   const googleProvider = new GoogleAuthProvider();
   const githubProvider = new GithubAuthProvider();
 
@@ -27,28 +28,27 @@ const AuthProvider = ({ children }) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
 
-  const upgradeProfile = (name, image,email) => {
-    setLoading(true);
-    return updateProfile(auth.currentUser, {
-      displayName: name ? name : user.displayName,
-      photoURL: image ? image : user.photoURL,
-      email: email ? email : user.email,
-    });
-  };
-  const logout = () => {
-    setLoading(true);
-    return signOut(auth);
-  };
-
   const createUserWithGoogle = () => {
     setLoading(true);
     return signInWithPopup(auth, googleProvider);
   };
 
-  const createUserWithGithub = ()=>{
+  const createUserWithGithub = () => {
     setLoading(true);
-    return signInWithPopup(auth,githubProvider);
-  }
+    return signInWithPopup(auth, githubProvider);
+  };
+
+  const updateUserInfo = (name, image) => {
+    return updateProfile(auth.currentUser, {
+      displayName: name ? name : auth.currentUser.displayName,
+      photoURL: image ? image : auth.currentUser.photoURL,
+    });
+  };
+
+  const logout = () => {
+    setLoading(true);
+    return signOut(auth);
+  };
 
   useEffect(() => {
     const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -67,10 +67,12 @@ const AuthProvider = ({ children }) => {
     createUser,
     createUserWithGoogle,
     createUserWithGithub,
-    upgradeProfile,
     signIn,
+    updateUserInfo,
     logout,
     loading,
+    setBio,
+    bio,
   };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
