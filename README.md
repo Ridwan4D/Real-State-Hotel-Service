@@ -8,3 +8,11 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 - react-hook-form
 - aos-animation css
+- tailwind-animate.css
+- you can register your account and login
+- this website has 3 privet routes
+- you can update your profile
+
+
+** Live link
+-rt-a9-real-estate.surge.sh
