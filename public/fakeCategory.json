@@ -5,8 +5,8 @@
       "segment_name": "Resort",
       "description": "Nestled along the pristine shores of the azure ocean, our Oceanfront Paradise Resort beckons you to indulge in a world of luxury and tranquility. With its breathtaking views, lush tropical gardens, and unparalleled amenities, this resort offers an unforgettable escape from the ordinary. Each elegantly appointed room and suite is designed to provide the utmost comfort and relaxation, featuring modern furnishings, plush bedding, and private balconies overlooking the shimmering sea. Step outside and discover a wealth of recreational activities, from lounging by the infinity pool to snorkeling in the crystal-clear waters. Indulge your senses with delectable cuisine at our fine dining restaurants, where expert chefs craft culinary masterpieces using the freshest local ingredients. Whether you're seeking adventure or relaxation, our Oceanfront Paradise Resort promises an unforgettable vacation experience.",
       "price": 500,
-      "status": "Premium",
-      "image": "https://example.com/resort1.jpg",
+      "status": "Classic",
+      "image": "https://i.ibb.co/sFZWwRh/resort-1.webp",
       "area": "7000 sq ft",
       "location": "Tropical Island",
       "facilities": ["Infinity Pool", "Private Beach", "Spa"]
@@ -18,7 +18,7 @@
       "description": "Escape to the serene beauty of the mountains and experience the ultimate retreat at our Mountain Lodge. Tucked away amidst towering pines and rugged peaks, our lodge offers a peaceful sanctuary for nature lovers and outdoor enthusiasts alike. Each cozy cabin features rustic yet comfortable accommodations, with wood-burning fireplaces, spacious living areas, and panoramic views of the surrounding wilderness. Explore miles of scenic trails that wind through forests and meadows, perfect for hiking, biking, or wildlife spotting. After a day of adventure, unwind in the outdoor hot tub or gather around the fire pit to share stories under the stars. Whether you're seeking solitude or companionship, our Mountain Lodge Retreat is the perfect destination for your next mountain getaway.",
       "price": 200,
       "status": "Classic",
-      "image": "https://example.com/lodge1.jpg",
+      "image": "https://i.ibb.co/Qn9yGjZ/lodge-1.jpg",
       "area": "2500 sq ft",
       "location": "Mountain Range",
       "facilities": ["Fireplace", "Hiking Trails", "Hot Tub"]
@@ -30,19 +30,19 @@
       "description": "Experience the vibrant energy of the city from the comfort of our Urban Boutique Hotel. Located in the heart of the bustling metropolis, our hotel offers a stylish retreat for discerning travelers. Each thoughtfully designed room and suite features modern amenities and chic decor, creating a sophisticated ambiance that reflects the city's cosmopolitan flair. Indulge in culinary delights at our onsite restaurant, where innovative dishes are crafted using locally sourced ingredients. After a day of exploring the city's iconic landmarks and attractions, unwind in our rooftop pool or sip cocktails at the rooftop bar while enjoying panoramic views of the skyline. Whether you're traveling for business or leisure, our Urban Boutique Hotel offers a luxurious oasis in the heart of the city.",
       "price": 300,
       "status": "Premium",
-      "image": "https://example.com/hotel1.jpg",
+      "image": "https://i.ibb.co/CJshk1F/hotel-1.jpg",
       "area": "3000 sq ft",
       "location": "Downtown Metropolis",
       "facilities": ["Restaurant", "Fitness Center", "Business Center"]
     },
     {
       "id": "4",
-      "estate_title": "Seaside Vacation Rental Cottage",
+      "estate_title": "Seaside Vacation Rental",
       "segment_name": "Vacation Rental",
       "description": "Escape to the charming coastal town and experience the laid-back vibe of seaside living at our Vacation Rental Cottage. Located just steps from the sandy shores and crashing waves, our cottage offers the perfect retreat for beach lovers and ocean enthusiasts. Relax and unwind in our cozy accommodations, featuring coastal-inspired decor, fully equipped kitchen, and spacious living areas. Step outside onto the deck and breathe in the salty sea air as you soak up the sun or enjoy al fresco dining with family and friends. Whether you're building sandcastles on the beach, exploring quaint coastal shops, or simply watching the sunset over the horizon, our Seaside Vacation Rental Cottage is your home away from home by the sea.",
       "price": 150,
-      "status": "Classic",
-      "image": "https://example.com/cottage1.jpg",
+      "status": "Premium",
+      "image": "https://i.ibb.co/gFtgbRQ/Vacation-Rental-1.jpg",
       "area": "1200 sq ft",
       "location": "Coastal Village",
       "facilities": ["Deck", "Beach Access", "Outdoor Dining Area"]
@@ -54,7 +54,7 @@
       "description": "Experience the serenity of lakeside living at our Charming Guesthouse. Nestled amidst tranquil waters and majestic mountains, our guesthouse offers a peaceful retreat for nature lovers and outdoor enthusiasts. Wake up to the gentle lapping of waves and the sound of birdsong as you enjoy panoramic views of the pristine lake from your private balcony. Each cozy room features comfortable furnishings, modern amenities, and rustic decor, creating a warm and inviting ambiance that feels like home. Spend your days kayaking on the lake, hiking scenic trails, or simply relaxing on the waterfront deck with a good book. Whether you're seeking adventure or relaxation, our Charming Guesthouse offers the perfect escape from the everyday hustle and bustle.",
       "price": 100,
       "status": "Premium",
-      "image": "https://example.com/guesthouse1.jpg",
+      "image": "https://i.ibb.co/hLMnH9S/Guesthouse-1.jpg",
       "area": "1500 sq ft",
       "location": "Lakefront Retreat",
       "facilities": ["Lake Access", "Waterfront Deck", "Kayaks"]
@@ -66,7 +66,7 @@
       "description": "Immerse yourself in the vibrant energy of the city at our City Center Boutique Hotel. Located in the heart of downtown, our hotel offers a stylish retreat for discerning travelers seeking comfort, convenience, and sophistication. Each meticulously designed room and suite features modern amenities, luxurious bedding, and contemporary decor, creating a chic urban oasis that feels like home. Indulge in culinary delights at our onsite restaurant, where innovative dishes are crafted using locally sourced ingredients. After a day of exploring the city's iconic landmarks and attractions, unwind in our rooftop pool or sip cocktails at the rooftop bar while enjoying panoramic views of the skyline. Whether you're traveling for business or leisure, our City Center Boutique Hotel offers a luxurious sanctuary in the heart of the city.",
       "price": 250,
       "status": "Premium",
-      "image": "https://example.com/hotel2.jpg",
+      "image": "https://i.ibb.co/1brf9hw/Hotel-2.jpg",
       "area": "2000 sq ft",
       "location": "Downtown Hub",
       "facilities": ["Restaurant", "Rooftop Pool", "Rooftop Bar"]
@@ -78,19 +78,19 @@
       "description": "Escape to the rustic charm of the mountains and experience the ultimate getaway at our Rustic Mountain Cabin Retreat. Tucked away amidst towering trees and babbling brooks, our cabin offers a peaceful sanctuary for those seeking solace in nature. Each cozy cabin features handcrafted furnishings, wood-burning stoves, and breathtaking views of the surrounding wilderness. Explore scenic trails that wind through forests and meadows, perfect for hiking, birdwatching, or simply enjoying the beauty of the great outdoors. After a day of adventure, unwind on the deck with a glass of wine or cozy up by the fire with a good book. Whether you're seeking adventure or relaxation, our Rustic Mountain Cabin Retreat offers the perfect escape from the hustle and bustle of everyday life.",
       "price": 180,
       "status": "Classic",
-      "image": "https://example.com/cabin1.jpg",
+      "image": "https://i.ibb.co/1rg19RT/Vacation-Rental-2.jpg",
       "area": "1800 sq ft",
       "location": "Mountainous Region",
-      "facilities": ["Wood Stove", "Deck", "Hiking Trails"]
+      "facilities": ["Wood Stove", "Private Mountain", "Hiking Trails"]
     },
     {
       "id": "8",
-      "estate_title": "Coastal Motel with Ocean Views",
+      "estate_title": "Coastal Motel with parking",
       "segment_name": "Motel",
       "description": "Experience the laid-back charm of coastal living at our Coastal Motel with Ocean Views. Located just steps from the sandy shores and rolling waves, our motel offers comfortable accommodations and breathtaking views of the sparkling ocean. Each spacious room features coastal-inspired decor, modern amenities, and private balconies overlooking the sea. Start your day with a refreshing dip in the ocean or lounge by the poolside with a tropical cocktail in hand. Explore nearby beaches, shops, and restaurants, or simply relax and soak up the sun on the beach. Whether you're seeking a romantic getaway or a fun-filled family vacation, our Coastal Motel with Ocean Views offers the perfect retreat by the sea.",
       "price": 120,
       "status": "Classic",
-      "image": "https://example.com/motel1.jpg",
+      "image": "https://i.ibb.co/7jfjdWY/Motel-1.jpg",
       "area": "1000 sq ft",
       "location": "Coastal Town",
       "facilities": ["Ocean View Balcony", "Outdoor Pool", "Beach Access"]
@@ -102,7 +102,7 @@
       "description": "Escape to the serenity of the woods and experience the ultimate retreat at our Serenity Chalet. Nestled amidst towering trees and tranquil streams, our chalet offers a peaceful sanctuary for nature lovers and outdoor enthusiasts alike. Each cozy cabin features rustic yet comfortable accommodations, with stone fireplaces, spacious living areas, and panoramic views of the surrounding forest. Explore scenic trails that wind through ancient forests, perfect for hiking, birdwatching, or simply enjoying the sights and sounds of nature. After a day of adventure, unwind on the deck with a glass of wine or soak in the hot tub under the stars. Whether you're seeking solitude or companionship, our Serenity Chalet offers the perfect escape from the hustle and bustle of everyday life.",
       "price": 220,
       "status": "Premium",
-      "image": "https://example.com/chalet1.jpg",
+      "image": "https://i.ibb.co/6PQ7F5V/Chalet.webp",
       "area": "2000 sq ft",
       "location": "Woodland Retreat",
       "facilities": ["Stone Fireplace", "Hot Tub", "Forest Views"]

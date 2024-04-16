@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 
 const Footer = () => {
   return (
     <div>
-      <footer className="footer p-10 bg-slate-900 text-white">
+      <footer data-aos="fade-up" data-aos-duration="1000" className="footer p-10 bg-slate-900 text-white">
         <nav>
           <h6 className="footer-title">Services</h6>
           <a className="link link-hover">Branding</a>
