@@ -29,7 +29,7 @@ const CategoryCard = ({ category }) => {
         </div>
         <div className="flex flex-col justify-between px-6 space-y-3">
           <div className="space-y-2">
-            <h2 className="text-xl md:text-3xl font-semibold tracking-wide">
+            <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold tracking-wide">
               {estate_title}
             </h2>
             <p className="dark:text-gray-800">
@@ -40,7 +40,7 @@ const CategoryCard = ({ category }) => {
           <p className="text-lg md:text-xl font-semibold">Segment: {segment_name}</p>
           <div className="">
             Facilities:
-            <ul className="flex font-semibold flex-wrap gap-x-5 gap-y-1">
+            <ul className="flex font-semibold flex-wrap gap-x-3 gap-y-1">
               {facilities.map((facility, index) => (
                 <li
                   className="border-b-2 border-slate-600 text-slate-500 px-3 py-1 rounded-md"

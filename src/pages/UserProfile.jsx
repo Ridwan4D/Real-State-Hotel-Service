@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
-// import userLogo from "../assets/user.png";
+import userLogo from "../assets/user.png";
 import "react-toastify/dist/ReactToastify.css";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
@@ -24,7 +24,7 @@ const UserProfile = () => {
           <div className="flex justify-center px-5  -mt-12">
             <img
               className="h-32 w-32 bg-white p-2 rounded-full mt-20"
-              src={user.photoURL}
+              src={user.photoURL || userLogo}
               alt=""
             />
           </div>
@@ -34,7 +34,7 @@ const UserProfile = () => {
                 {user.displayName}
               </h2>
               <a className="text-gray-400 mt-2">{user.email}</a>
-              <div className="text-start mt-3 space-y-2">
+              <div className="text-start mt-3 space-y-5">
                 <Link className="px-5 py-2 rounded-lg bg-gray-100 border-b-4 font-medium" to='/updateProfile'>Add or Update Bio</Link> {" "}
               <p className="text-sm text-gray-600">{bio}</p>
               </div>

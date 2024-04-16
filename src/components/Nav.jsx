@@ -92,7 +92,7 @@ const Nav = () => {
       </div>
       <div className="navbar-end space-x-1">
         {user ? (
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <div className="flex justify-center items-center gap-2">
               <div
                 tabIndex={0}

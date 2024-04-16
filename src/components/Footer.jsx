@@ -8,28 +8,28 @@ AOS.init();
 const Footer = () => {
   return (
     <div>
-      <footer data-aos="fade-up" data-aos-duration="1000" className="footer p-10 bg-slate-900 text-white">
-        <nav>
+      <footer className="grid grid-cols-2 md:grid-cols-4 gap-y-10 px-3 md:p-10 bg-slate-900 text-white">
+        <nav className="flex flex-col">
           <h6 className="footer-title">Services</h6>
           <a className="link link-hover">Hotel</a>
           <a className="link link-hover">Motel</a>
           <a className="link link-hover">Resort</a>
           <a className="link link-hover">Guest House</a>
         </nav>
-        <nav>
+        <nav className="flex flex-col">
           <h6 className="footer-title">Company</h6>
           <Link to="/about" className="link link-hover">About us</Link>
           <Link to="/contact" className="link link-hover">Contact</Link>
           <a className="link link-hover">Jobs</a>
           <a className="link link-hover">Press kit</a>
         </nav>
-        <nav>
+        <nav className="flex flex-col">
           <h6 className="footer-title">Legal</h6>
           <a className="link link-hover">Terms of use</a>
           <a className="link link-hover">Privacy policy</a>
           <a className="link link-hover">Cookie policy</a>
         </nav>
-        <nav>
+        <nav className="flex flex-col">
           <img src={logo} alt="" width="200" className="rounded-xl" />
           <p className="text-blue-400 flex items-center gap-1"><IoCheckmarkDone />The Signature of Reez</p>
         </nav>

@@ -97,7 +97,7 @@ const Details = () => {
                 <p className="text-xl font-medium">Description:</p>
                 {description}
               </div>
-              <div className="text-end py-5">
+              <div className="text-center md:text-end py-5">
                 <Link to="/" className="btn btn-wide">
                   <IoMdArrowBack /> Go Back
                 </Link>
