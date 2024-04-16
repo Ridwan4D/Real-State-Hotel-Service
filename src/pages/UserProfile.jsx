@@ -10,18 +10,18 @@ const UserProfile = () => {
   console.log(user.phoneNumber);
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
-    const { name, image } = data;
-    console.log(name, image);
-    upgradeProfile(name, image).then(() => {
+    const { name, image,email } = data;
+    console.log(name, image,email);
+    upgradeProfile(name, image,email).then(() => {
       toast("Profile updated");
     });
   };
   return (
     <div>
-      <h3 className="text-4xl font-bold  animate__animated animate__flip shadow-lg">
+      <h3 className="text-xl md:text-4xl font-bold  animate__animated animate__flip shadow-lg">
         User Profile
       </h3>
-      <div className=" flex flex-wrap items-center justify-center bg-gray-100 py-10">
+      <div className=" flex flex-wrap items-center justify-center bg-gray-100 py-4 md:py-10">
         <div className="container lg:w-2/6 xl:w-2/7 sm:w-full md:w-2/3    bg-white  shadow-lg    transform   duration-200 easy-in-out">
           <div className="flex justify-center px-5  -mt-12">
             <img
@@ -32,7 +32,7 @@ const UserProfile = () => {
           </div>
           <div className=" ">
             <div className="text-center px-14">
-              <h2 className="text-gray-800 text-3xl font-bold">
+              <h2 className="text-gray-800 text-xl md:text-3xl font-bold">
                 {user.displayName}
               </h2>
               <a className="text-gray-400 mt-2">{user.email}</a>
@@ -89,6 +89,23 @@ const UserProfile = () => {
                         {...register("name")}
                         className="rounded-none rounded-r-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         placeholder="user name"
+                      />
+                    </div>
+                    <label
+                      htmlFor="website-admin"
+                      className="block my-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                    >
+                      Email
+                    </label>
+                    <div className="flex">
+                      <span className="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
+                        @
+                      </span>
+                      <input
+                        type="text"
+                        {...register("email")}
+                        className="rounded-none rounded-r-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="Email"
                       />
                     </div>
                     <label

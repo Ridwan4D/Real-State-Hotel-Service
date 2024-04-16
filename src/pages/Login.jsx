@@ -117,7 +117,7 @@ const Login = () => {
                     </div>
                   </div>
                 </div>
-                <div className="mt-4 flex items-center justify-between">
+                <div className="mt-4 flex flex-col md:items-center md:justify-between gap-y-2">
                   <label className="flex items-center gap-2">
                     <input
                       type="checkbox"

@@ -10,7 +10,8 @@ const Register = () => {
   const [success, setSuccess] = useState("");
   const [registerError, setRegisterError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-  const { createUser, createUserWithGoogle } = useContext(AuthContext);
+  const { createUser, createUserWithGoogle, createUserWithGithub } =
+    useContext(AuthContext);
 
   // google register
   const handleGoogleRegister = () => {
@@ -24,6 +25,17 @@ const Register = () => {
       });
   };
 
+  // github register
+  const handleGithubRegister = () => {
+    createUserWithGithub()
+      .then((result) => {
+        console.log(result);
+        toast("Registered");
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  };
   // email register
   const handleRegister = (e) => {
     e.preventDefault();
@@ -83,7 +95,7 @@ const Register = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-stretch text-white ">
+    <section className="mt-20 min-h-screen flex items-stretch text-white ">
       <div
         className="lg:flex w-1/2 hidden bg-gray-500 bg-no-repeat bg-cover relative items-center"
         style={{
@@ -105,7 +117,7 @@ const Register = () => {
         style={{ backgroundColor: "#161616" }}
       >
         <div
-          className="absolute lg:hidden z-10 inset-0 bg-gray-500 bg-no-repeat bg-cover items-center"
+          className="absolute top-20 lg:hidden z-10 inset-0 bg-gray-500 bg-no-repeat bg-cover items-center"
           style={{
             backgroundImage:
               "url(https://images.unsplash.com/photo-1577495508048-b635879837f1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80)",
@@ -150,6 +162,7 @@ const Register = () => {
               </p>
             </button>
             <button
+              onClick={handleGithubRegister}
               aria-label="Continue with github"
               role="button"
               className="focus:outline-none  focus:ring-2 focus:ring-offset-1 focus:ring-gray-700 py-3.5 px-4 border rounded-lg border-gray-700 flex items-center w-full mt-4"

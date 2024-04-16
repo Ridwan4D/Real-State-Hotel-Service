@@ -28,7 +28,7 @@ const CategoryCard = ({ category }) => {
         </div>
         <div className="flex flex-col justify-between px-6 space-y-3">
           <div className="space-y-2">
-            <h2 className="text-3xl font-semibold tracking-wide">
+            <h2 className="text-xl md:text-3xl font-semibold tracking-wide">
               {estate_title}
             </h2>
             <p className="dark:text-gray-800">
@@ -36,7 +36,7 @@ const CategoryCard = ({ category }) => {
               ......
             </p>
           </div>
-          <p className="text-xl font-semibold">Segment: {segment_name}</p>
+          <p className="text-lg md:text-xl font-semibold">Segment: {segment_name}</p>
           <div className="">
             Facilities:
             <ul className="flex font-semibold flex-wrap gap-x-5 gap-y-1">
@@ -53,7 +53,7 @@ const CategoryCard = ({ category }) => {
           <div className="py-3 text-center">
             <Link
               to={`/category/${id}`}
-              className="btn btn-wide font-semibold bg-slate-900 px-3 py-1 text-gray-400 hover:text-slate-700"
+              className="btn w-full md:btn-wide font-semibold bg-slate-900 px-3 py-1 text-gray-400 hover:text-slate-700"
             >
               View Property
             </Link>

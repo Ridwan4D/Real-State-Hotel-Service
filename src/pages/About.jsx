@@ -2,10 +2,10 @@ const About = () => {
   return (
     <div className="space-y-5">
       <div className=" text-center ">
-        <h3 className="text-4xl font-bold animate__animated animate__fadeInUp">
+        <h3 className="text-3xl md:text-4xl font-bold animate__animated animate__fadeInUp">
           About Us
         </h3>
-        <p className="text-2xl underline text-gray-500">
+        <p className="text-xl md:text-2xl mb-2 md:mb-5 underline text-gray-500">
           Welcome to The Reez Family!
         </p>
         <p className="text-start text-gray-600">
@@ -16,7 +16,7 @@ const About = () => {
         </p>
       </div>
       <div>
-        <h3 className="text-3xl font-semibold">Our Story</h3>
+        <h3 className="text-2xl md:text-3xl font-semibold underline">Our Story</h3>
         <p className="text-gray-600">
           Founded in <span className="font-semibold">2024</span>,{" "}
           <span className="font-semibold">The Reez</span> began as a dream
@@ -33,7 +33,7 @@ const About = () => {
         </p>
       </div>
       <div className="text-end">
-        <h3 className="text-3xl font-semibold">Our Mission</h3>
+        <h3 className="text-2xl md:text-3xl font-semibold underline">Our Mission</h3>
         <p className="text-gray-600">
           At <span className="font-semibold">The Reez</span>, our mission is
           simple: to create extraordinary experiences that leave a lasting
@@ -45,7 +45,7 @@ const About = () => {
         </p>
       </div>
       <div>
-        <h3 className="text-3xl font-semibold">Meet Our Team</h3>
+        <h3 className="text-2xl md:text-3xl font-semibold underline">Meet Our Team</h3>
         <p className="text-gray-600">
           Behind every great experience is a dedicated team of professionals who
           are passionate about hospitality. Led by{" "}
@@ -284,27 +284,27 @@ const About = () => {
         </div>
       </div>
       <div className="text-end">
-        <h3 className="text-3xl font-semibold">Our Location</h3>
+        <h3 className="text-2xl md:text-3xl font-semibold underline">Our Location</h3>
         <p className="text-gray-600">
           Located in the picturesque{" "}
           <span className="font-semibold">Agrabad, Chattogram</span>,{" "}
           <span className="font-semibold">The Reez</span> offers the perfect
-          blend of tranquility and convenience. Whether you're exploring the
+          blend of tranquility and convenience. Whether you are exploring the
           local attractions, embarking on outdoor adventures, or simply relaxing
           amidst breathtaking scenery, our location provides endless
           opportunities for exploration and discovery.
         </p>
       </div>
       <div>
-        <h3 className="text-3xl font-semibold">Our Philosophy</h3>
+        <h3 className="text-2xl md:text-3xl font-semibold underline">Our Philosophy</h3>
         <p className="text-gray-600">
           At <span className="font-semibold">The Reez</span>, hospitality is
-          more than just a business—it's a way of life. Our philosophy is rooted
+          more than just a business it is a way of life. Our philosophy is rooted
           in the belief that every interaction is an opportunity to create a
-          meaningful connection. Whether it's a warm greeting upon arrival, a
+          meaningful connection. Whether it is a warm greeting upon arrival, a
           personalized recommendation, or an extra touch to make your stay
           special, we are committed to exceeding your expectations and creating
-          moments that you'll cherish forever.
+          moments that you will cherish forever.
         </p>
       </div>
     </div>

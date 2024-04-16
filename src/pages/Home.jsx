@@ -15,8 +15,8 @@ const Home = () => {
       {/* cards of provide*/}
       <div className="space-y-10">
         <div className="space-y-3">
-          <h2 className="text-4xl font-bold text-center">We Provide You</h2>
-          <p className="text-center text-sm text-gray-500">
+          <h2 className="text-3xl md:text-4xl hover:underline font-bold text-center">We Provide You</h2>
+          <p className="md:text-center text-sm text-gray-500">
             At The Reez, our commitment to excellence is woven into every aspect
             of your stay. Whether your seeking a tranquil retreat, a culinary
             journey, or a seamless event experience, we have you covered. From
