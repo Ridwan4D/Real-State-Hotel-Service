@@ -1,0 +1,26 @@
+[
+  {
+    "hotelName": "Sunshine Resort",
+    "image": "https://i.ibb.co/ZYmyNDJ/images.jpg",
+    "offerName": "Sunny Escape Package",
+    "description": "Experience the ultimate getaway with our Sunny Escape Package! Enjoy luxurious accommodations, complimentary breakfast, and exclusive access to our pool and beach amenities. Book now for a rejuvenating summer retreat.",
+    "previousPrice": "$1200",
+    "offerPrice": "$999"
+  },
+  {
+    "hotelName": "Family Paradise Hotel",
+    "image": "https://i.ibb.co/BsQ9mDH/d47ed8267c3c99117d3ea731b5fba618-summer-offer-promo-poster.webp",
+    "offerName": "Family Fun Package",
+    "description": "Create lasting memories with our Family Fun Package! Treat your loved ones to spacious accommodations, kid-friendly activities, and special dining options. Plus, kids stay and eat for free! Plan your family vacation today.",
+    "previousPrice": "$1500",
+    "offerPrice": "$1299"
+  },
+  {
+    "hotelName": "Romantic Haven Resort",
+    "image": "https://i.ibb.co/5BnmcWG/images-1.jpg",
+    "offerName": "Sunset Cruise Special",
+    "description": "Embark on a romantic journey with our Sunset Cruise Special! Experience breathtaking views, gourmet dining, and live entertainment aboard our private yacht. Perfect for couples seeking a memorable evening under the stars.",
+    "previousPrice": "$500",
+    "offerPrice": "$399"
+  }
+]

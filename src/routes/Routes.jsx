@@ -8,7 +8,8 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import UserProfile from "../pages/UserProfile";
 import PrivateRoute from "./PrivateRoute";
-import WishPage from "../pages/WishPage";
+import Details from "../pages/Details";
+import Offers from "../pages/Offers";
 
 const router = createBrowserRouter([
   {
@@ -19,7 +20,16 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Home></Home>,
-        loader:()=>fetch("/fakeCategory.json"),
+        loader: () => fetch("/fakeCategory.json"),
+      },
+      {
+        path: "/category/:id",
+        element: (
+          <PrivateRoute>
+            <Details></Details>
+          </PrivateRoute>
+        ),
+        loader: () => fetch(`/fakeCategory.json`),
       },
       {
         path: "/about",
@@ -47,12 +57,14 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/wishPage",
+        path: "/offers",
         element: (
           <PrivateRoute>
-            <WishPage></WishPage>
+            {/* <UserProfile></UserProfile> */}
+            <Offers></Offers>
           </PrivateRoute>
         ),
+        loader: ()=>fetch(`/offer.json`)
       },
     ],
   },

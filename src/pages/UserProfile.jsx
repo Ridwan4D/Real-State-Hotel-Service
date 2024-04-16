@@ -41,14 +41,14 @@ const UserProfile = () => {
             <div className="flex  bg-gray-50 ">
               <div className="text-center w-1/2 p-4 hover:bg-gray-100 cursor-pointer">
                 <p>
-                  <span className="font-semibold">2.5 k </span> Followers
+                  <span className="font-semibold">The Reez</span>
                 </p>
               </div>
               <div className="border"></div>
               <div className="text-center w-1/2 p-4 hover:bg-gray-100 cursor-pointer">
                 <p>
                   {" "}
-                  <span className="font-semibold">2.0 k </span> Following
+                  <span className="font-semibold">Property</span>
                 </p>
               </div>
             </div>

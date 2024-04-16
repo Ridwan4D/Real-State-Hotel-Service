@@ -21,7 +21,7 @@ const Nav = () => {
       </li>
       {user && (
         <li>
-          <NavLink to="/wishPage">User Wish</NavLink>
+          <NavLink to="/offers">User Offers</NavLink>
         </li>
       )}
     </>
