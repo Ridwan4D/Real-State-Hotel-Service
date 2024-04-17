@@ -14,5 +14,5 @@ Currently, two official plugins are available:
 - you can update your profile
 
 
-** Live link
--rt-a9-real-estate.surge.sh
+[The Reez](https://a9-real-estate-react-pro.vercel.app/)
+
