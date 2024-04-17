@@ -6,3 +6,13 @@ Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- react-hook-form
+- aos-animation css
+- tailwind-animate.css
+- you can register your account and login
+- this website has 3 privet routes
+- you can update your profile
+
+
+[The Reez](https://a9-real-estate-react-pro.vercel.app/)
+
