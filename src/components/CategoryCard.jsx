@@ -1,5 +1,6 @@
 import PropType from "prop-types";
 import { Link } from "react-router-dom";
+import { FaArrowRight } from "react-icons/fa6";
 const CategoryCard = ({ category }) => {
   //   console.log(category);
   const {
@@ -13,7 +14,6 @@ const CategoryCard = ({ category }) => {
   } = category;
   return (
     <div>
-      
       <div
         className="rounded-md shadow-md dark:bg-gray-50 dark:text-gray-800 hover:scale-95 transition-all hover:shadow-xl"
         data-aos="zoom-in"
@@ -37,7 +37,9 @@ const CategoryCard = ({ category }) => {
               ......
             </p>
           </div>
-          <p className="text-lg md:text-xl font-semibold">Segment: {segment_name}</p>
+          <p className="text-lg md:text-xl font-semibold">
+            Segment: {segment_name}
+          </p>
           <div className="">
             Facilities:
             <ul className="flex font-semibold flex-wrap gap-x-3 gap-y-1">
@@ -57,6 +59,7 @@ const CategoryCard = ({ category }) => {
               className="btn w-full md:btn-wide font-semibold bg-slate-900 px-3 py-1 text-gray-400 hover:text-slate-700"
             >
               View Property
+              <FaArrowRight />
             </Link>
           </div>
         </div>

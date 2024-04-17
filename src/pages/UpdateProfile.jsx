@@ -6,7 +6,7 @@ import { Helmet } from "react-helmet";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const UpdateProfile = () => {
-  const { updateUserInfo, setBio } = useContext(AuthContext);
+  const { updateUserInfo, } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
@@ -24,7 +24,7 @@ const UpdateProfile = () => {
         navigate(location.state ? location.state : "/userProfile");
       }, 500);
     });
-    setBio(biography);
+    localStorage.setItem("bio",JSON.stringify(biography))
   };
 
   return (

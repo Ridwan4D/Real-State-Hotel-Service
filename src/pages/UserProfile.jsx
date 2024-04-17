@@ -6,8 +6,9 @@ import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 
 const UserProfile = () => {
-  const { user,bio } = useContext(AuthContext);
+  const { user} = useContext(AuthContext);
   console.log(user);
+  const bio =  JSON.parse(localStorage.getItem('bio'));
   
   return (
     <div>

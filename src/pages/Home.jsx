@@ -1,8 +1,8 @@
 import { useLoaderData } from "react-router-dom";
 import CategoryCard from "../components/CategoryCard";
 import Slider from "../components/Slider";
-import Offers from "./Offers";
 import { Helmet } from "react-helmet";
+import OurTeam from "../components/OurTeam";
 const Home = () => {
   const categories = useLoaderData();
   //   console.log(offers);
@@ -40,7 +40,9 @@ const Home = () => {
           ))}
         </div>
       </div>
-      <hr className="border border-dashed mb-10" />
+      <hr className="border border-dashed my-10" />
+      {/* our team */}
+      <OurTeam></OurTeam>
     </div>
   );
 };

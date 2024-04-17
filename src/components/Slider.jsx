@@ -35,31 +35,31 @@ const Slider = () => {
             <li>
               <img
                 src={slider1}
-                className="w-full max-w-full h-[70vh] m-auto"
+                className="w-full max-w-full h-[50vh] md:h-[70vh] m-auto"
               />
             </li>
             <li>
               <img
                 src={slider2}
-                className="w-full max-w-full h-[70vh] m-auto"
+                className="w-full max-w-full h-[50vh] md:h-[70vh] m-auto"
               />
             </li>
             <li>
               <img
                 src={slider3}
-                className="w-full max-w-full h-[70vh] m-auto"
+                className="w-full max-w-full h-[50vh] md:h-[70vh] m-auto"
               />
             </li>
             <li>
               <img
                 src={slider4}
-                className="w-full max-w-full h-[70vh] m-auto"
+                className="w-full max-w-full h-[50vh] md:h-[70vh] m-auto"
               />
             </li>
             <li>
               <img
                 src={slider5}
-                className="w-full max-w-full h-[70vh] m-auto"
+                className="w-full max-w-full h-[50vh] md:h-[70vh] m-auto"
               />
             </li>
           </ul>

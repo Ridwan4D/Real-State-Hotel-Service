@@ -13,8 +13,8 @@ const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
   const { createUser, createUserWithGoogle, createUserWithGithub } =
     useContext(AuthContext);
-    const location = useLocation();
-    const navigate = useNavigate();
+  const location = useLocation();
+  const navigate = useNavigate();
   // google register
   const handleGoogleRegister = () => {
     createUserWithGoogle()
@@ -22,10 +22,11 @@ const Register = () => {
         console.log(result);
         toast("Registered");
         // navigate after register
-        navigate(location?.state ? location.state : '/')
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
         console.log(error.message);
+        setRegisterError(error.message);
       });
   };
 
@@ -36,10 +37,11 @@ const Register = () => {
         console.log(result);
         toast("Registered");
         // navigate after register
-        navigate(location?.state ? location.state : '/')
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
         console.log(error.message);
+        setRegisterError(error.message);
       });
   };
   // email register
@@ -87,7 +89,7 @@ const Register = () => {
           email: email,
         }).then();
         // navigate after register
-        navigate(location?.state ? location.state : '/')
+        navigate(location?.state ? location.state : "/");
         e.target.name.value = "";
         e.target.email.value = "";
         e.target.image.value = "";

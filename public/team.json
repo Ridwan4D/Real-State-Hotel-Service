@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Bonnie Green",
+    "role": "COO & Web Developer",
+    "image": "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png",
+    "bio": "Bonnie drives the technical strategy of the 'The Reez' company and brand."
+  },
+  {
+    "name": "Jese Leos",
+    "role": "CTO",
+    "image": "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png",
+    "bio": "Jese drives the technical strategy of the 'The Reez' company and brand."
+  },
+  {
+    "name": "Michael Gough",
+    "role": "Senior Front-end Developer",
+    "image": "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png",
+    "bio": "Michael drives the technical strategy of the 'The Reez' company and brand."
+  },
+  {
+    "name": "Lana Byrd",
+    "role": "Marketing & Sale",
+    "image": "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/sofia-mcguire.png",
+    "bio": "Lana drives the technical strategy of the 'The Reez' company and brand."
+  }
+]
