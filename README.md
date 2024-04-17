@@ -12,6 +12,9 @@ Currently, two official plugins are available:
 - you can register your account and login
 - this website has 3 privet routes
 - you can update your profile
+- full responsive for all device
+- it's tailwind css and react based website
+
 
 
 [The Reez](https://a9-real-estate-react-pro.vercel.app/)
