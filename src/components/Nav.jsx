@@ -62,7 +62,7 @@ const Nav = () => {
                   onClick={handleLogOut}
                   className="px-7 py-1 text-white text-sm font-semibold hover:bg-gray-600 hover:text-black active:scale-95 rounded-none bg-slate-900"
                 >
-                  Sing out
+                  Logout
                 </button>
               </div>
             )}
@@ -112,7 +112,7 @@ const Nav = () => {
                   onClick={handleLogOut}
                   className="px-7 py-1 text-white text-xl font-semibold hover:bg-gray-600 hover:text-black active:scale-95 rounded-none bg-slate-900"
                 >
-                  Sing out
+                  Logout
                 </button>
               </div>
             </div>
