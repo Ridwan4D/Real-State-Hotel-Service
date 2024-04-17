@@ -6,15 +6,21 @@ import { Helmet } from "react-helmet";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const UpdateProfile = () => {
-  const { updateUserInfo, } = useContext(AuthContext);
+  const { updateUserInfo } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
   // console.log(setBio);
   const onSubmit = (data) => {
-    const { name, image, biography } = data;
-    console.log(name, image, biography);
-    if (name == "" && image == "" && biography == "") {
+    const { name, image, biography, phone, address } = data;
+    console.log(name, image, biography, phone, address);
+    if (
+      name == "" &&
+      image == "" &&
+      biography == "" &&
+      phone == "" &&
+      address == ""
+    ) {
       toast("Nothing Changed");
       return;
     }
@@ -23,8 +29,16 @@ const UpdateProfile = () => {
       setTimeout(() => {
         navigate(location.state ? location.state : "/userProfile");
       }, 500);
+      if (biography !== "") {
+        localStorage.setItem("bio", JSON.stringify(biography));
+      }
+      if (phone !== "") {
+        localStorage.setItem("number", JSON.stringify(phone));
+      }
+      if (address !== "") {
+        localStorage.setItem("address", JSON.stringify(address));
+      }
     });
-    localStorage.setItem("bio",JSON.stringify(biography))
   };
 
   return (
@@ -62,6 +76,34 @@ const UpdateProfile = () => {
             <input
               type="text"
               {...register("image")}
+              className="rounded-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Image"
+            />
+          </div>
+          <label
+            htmlFor="website-admin"
+            className="block my-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+          >
+            Phone
+          </label>
+          <div className="flex">
+            <input
+              type="text"
+              {...register("phone")}
+              className="rounded-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Image"
+            />
+          </div>
+          <label
+            htmlFor="website-admin"
+            className="block my-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+          >
+            Address
+          </label>
+          <div className="flex">
+            <input
+              type="text"
+              {...register("address")}
               className="rounded-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="Image"
             />
