@@ -58,19 +58,6 @@ const Nav = () => {
             {navLinks}
             {user && (
               <div className="flex flex-col-reverse gap-2">
-                <div
-                  tabIndex={0}
-                  role="button"
-                  className="btn btn-ghost btn-circle avatar"
-                >
-                  <Link to="/userProfile" className="w-10 rounded-full">
-                    <img
-                      alt="Tailwind CSS Navbar component"
-                      className="rounded-full animate__animated hover:animate__heartBeat"
-                      src={user?.photoURL || userLogo}
-                    />
-                  </Link>
-                </div>
                 <button
                   onClick={handleLogOut}
                   className="px-7 py-1 text-white text-sm font-semibold hover:bg-gray-600 hover:text-black active:scale-95 rounded-none bg-slate-900"
@@ -92,27 +79,42 @@ const Nav = () => {
       </div>
       <div className="navbar-end space-x-1">
         {user ? (
-          <div className="hidden lg:block">
-            <div className="flex justify-center items-center gap-2">
-              <div
-                tabIndex={0}
-                role="button"
-                className="btn btn-ghost btn-circle avatar"
-              >
-                <Link to="/userProfile" className="w-10 rounded-full">
-                  <img
-                    alt="Tailwind CSS Navbar component"
-                    className="rounded-full animate__animated hover:animate__heartBeat"
-                    src={user?.photoURL || userLogo}
-                  />
-                </Link>
+          <div>
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn btn-ghost btn-circle avatar lg:hidden"
+            >
+              <Link to="/userProfile" className="w-10 rounded-full">
+                <img
+                  alt="Tailwind CSS Navbar component"
+                  className="rounded-full animate__animated hover:animate__heartBeat"
+                  src={user?.photoURL || userLogo}
+                />
+              </Link>
+            </div>
+            <div className="hidden lg:block">
+              <div className="flex justify-center items-center gap-2">
+                <div
+                  tabIndex={0}
+                  role="button"
+                  className="btn btn-ghost btn-circle avatar"
+                >
+                  <Link to="/userProfile" className="w-10 rounded-full">
+                    <img
+                      alt="Tailwind CSS Navbar component"
+                      className="rounded-full animate__animated hover:animate__heartBeat"
+                      src={user?.photoURL || userLogo}
+                    />
+                  </Link>
+                </div>
+                <button
+                  onClick={handleLogOut}
+                  className="px-7 py-1 text-white text-xl font-semibold hover:bg-gray-600 hover:text-black active:scale-95 rounded-none bg-slate-900"
+                >
+                  Sing out
+                </button>
               </div>
-              <button
-                onClick={handleLogOut}
-                className="px-7 py-1 text-white text-xl font-semibold hover:bg-gray-600 hover:text-black active:scale-95 rounded-none bg-slate-900"
-              >
-                Sing out
-              </button>
             </div>
           </div>
         ) : (
